@@ -9,7 +9,7 @@ sorted_operations = sorted(
     reverse=True
 )
 
-for operation in sorted_operations[:5]:
+for operation in sorted_operations[:10]:
     date = datetime.strptime(operation['date'], '%Y-%m-%dT%H:%M:%S.%f').strftime('%d.%m.%Y')
     description = operation['description'] if 'description' in operation else 'Н/Д'
     amount = operation['operationAmount']['amount']
